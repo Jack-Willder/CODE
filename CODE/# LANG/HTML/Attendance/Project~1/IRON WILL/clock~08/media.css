@@ -1,0 +1,13 @@
+@media screen and (max-width: 720px)
+{
+    .subContainer
+    {
+        width: 90vw;
+        height: 200px;
+    }
+    .clockText
+    {
+        font-size: calc(6vw + 1rem);
+    }
+
+}

@@ -1,0 +1,304 @@
+import time
+from PIL import Image, ImageDraw, ImageFont
+
+final_rank = """01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+"""
+
+final_rollno = """21SCS40
+21SCS07
+21SCS19
+21SCS37
+21SCS22
+21SCS30
+21SCS47
+21SCS10
+21SCS39
+21SCS36
+21SCS33
+21SCS29
+21SCS09
+21SCS08
+21SCS44
+21SCS18
+21SCS32
+21SCS48
+21SCS35
+21SCS38
+21SCS12
+21SCS42
+21SCS23
+21SCS14
+21SCS05
+21SCS43
+21SCS13
+21SCS11
+21SCS24
+21SCS21
+21SCS17
+21SCS04
+21SCS01
+21SCS46
+21SCS26
+21SCS06
+21SCS34
+21SCS15
+21SCS31
+21SCS27
+21SCS20
+21SCS16
+21SCS28
+21SCS02
+21SCS03
+21SCS41"""
+final_name = """MUTHURAJ C
+ABDUL SALAM I
+MOHAMED AKRAM I
+MOHAMED SAMSUL ALAM K
+MOHAMED HAJA SHERIF A
+MUSHARAF T
+SURIYA M
+AL HAJI A
+MUGUNTHAN M
+DINESH KANNA R
+WAHITH KANI M
+MOHAMMED AFZAR SAMSUDEEN M
+AHAMED WAJUDEEN S
+ABUBAKKAR SIDDIK A
+SELVAN A
+MOHAMED ABUBAKKAR SIDDIQ S M S
+SYED SIRASUDEEN M
+VIGNESH A
+DEVAK H
+MOHAMED SULAIMAN U
+JAFFAR SHAFAN N
+SABAREESH SOUNDHAR G
+MOHAMED IQBAL S
+KOTHER THOWFEEK J
+SUMAIYA PARVIN N
+SANKARA RAMESWARAN R
+JAMAL J M
+IRFAN K
+MOHAMED ISMAIL I
+MOHAMED ASRAFF S
+MOHAMED ABDUL RASEETH A K
+SANJANA DEVI M
+GOWSICA K
+VELMURUGAN U
+MOHAMED RISWAN S S
+ABDUL HAMEED S M
+ARUMUGAPERUMAL N
+MOHAMAD ALHARIS U
+SYED MOHAMMED ZAHIR HUSSAIN I
+MOHAMED SUHAIL M S
+MOHAMED ALI JINNAH S A
+MOHAMED AATHIL N K
+MOHAMED YUNUS S
+JANAKI CAUVERY S
+JESINTHA JEYA MOORTHY C
+RAMALINGAMSABARISH M"""
+final_absent = """23.5
+22
+21
+20.5
+20.5
+19.5
+19
+15.5
+14.5
+14
+13.5
+13.5
+13.5
+13.5
+13
+13
+12
+11.5
+11.5
+11
+11
+10.5
+10.5
+10.5
+10.5
+10
+10
+10
+9.5
+9.5
+9.5
+9.5
+9.5
+9
+9
+9
+8.5
+8.5
+8
+7
+7
+7
+6.5
+4.5
+3
+2"""
+final_od = """0
+2
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+3
+0
+1
+0
+0
+0
+0
+4
+4
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+4
+4
+0"""
+final_percent = """54.81
+57.69
+59.62
+60.58
+60.58
+62.5
+63.46
+70.19
+72.12
+73.08
+74.04
+74.04
+74.04
+74.04
+75
+75
+76.92
+77.88
+77.88
+78.85
+78.85
+79.81
+79.81
+79.81
+79.81
+80.77
+80.77
+80.77
+81.73
+81.73
+81.73
+81.73
+81.73
+82.69
+82.69
+82.69
+83.65
+83.65
+84.62
+86.54
+86.54
+86.54
+87.5
+91.35
+94.23
+96.15
+"""
+
+named_tuple = time.localtime()
+local_time = time.strftime("%d_%m_%Y", named_tuple)
+
+print("Created {}.png".format(local_time))
+
+new = Image.open("BG.png")
+
+d = ImageDraw.Draw(new)
+
+font = ImageFont.truetype(font="font/Roboto-Medium.ttf", size=30)
+fill = (255, 255, 255)
+
+d.text((170 + 150 - 90, 448), text=final_rank, fill=(249, 255, 33), font=font, spacing=15)
+d.text((170 + 300 - 70, 448), text=final_rollno, fill=fill, font=font, spacing=15)
+d.text((350 + 300 - 50, 448), text=final_name, fill=fill, font=font, spacing=15)
+d.text((950 + 300, 448), text=final_absent, fill=fill, font=font, spacing=15)
+d.text((1100 + 300, 448), text=final_od, fill=fill, font=font, spacing=15)
+d.text((1200 + 300, 448), text=final_percent, fill=fill, font=font, spacing=15)
+d.text((500, 2822), text="58", fill=(147, 147, 147), font=font, spacing=15)
+
+new.save("Output/{}.png".format(local_time))

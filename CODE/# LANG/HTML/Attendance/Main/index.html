@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="outline-1">
+        <div class="outline-2">
+            <fieldset>
+                <legend>Attendance</legend>
+                <div class="main">
+                    <div class="main-content">
+                        <div id="num">0</div>
+                        <div>days of Holidays</div>
+                    </div>
+                    <div class="main-buttons">
+                        <div class="buttons">
+                            <button class="b button-1" onclick="totalClick(-1)">-</button>
+                            <button class="b button-2" onclick="totalClick(1)">+</button>    
+                            <button class="b button-3" onclick="resetButton()">()</button>    
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <script>
+        function totalClick(click) {
+            const totalClicks = document.getElementById('num');
+            const sumvalue = parseInt(totalClicks.innerText) + click;
+            console.log(sumvalue);
+            totalClicks.innerText = sumvalue;
+            
+            // Avoid negatives
+            if(sumvalue < 0) {
+                totalClicks.innerText = 0;
+            }
+
+            // Avoid 90+
+            if(sumvalue > 90) {
+                totalClicks.innerText = 90;
+            }
+
+            // Saving to local storage
+            localStorage.setItem('number', JSON.stringify(sumvalue) );
+        }
+        // Reset Button
+        function resetButton() {
+            const totalClicks = document.getElementById('num');
+            const sumvalue = 0;
+            totalClicks.innerText = sumvalue;
+        }
+
+        // Recall value function
+        const recall = function() {
+            const sumvalue = 0;
+            const value = document.getElementById('num');
+            const getvalue = localStorage.getItem('number', sumvalue);
+            value.innerText = getvalue;
+        }
+
+        document.onload = recall();
+    </script>
+</body>
+</html>

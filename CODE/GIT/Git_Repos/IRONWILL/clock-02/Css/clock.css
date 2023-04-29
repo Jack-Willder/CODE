@@ -1,0 +1,263 @@
+:root
+{
+    --scalesub: calc(100vh / 300vw)
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+body
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: hsl(00, 00%, 5%);
+    color: white;
+}
+/* Main Container */
+.mainContainer
+{
+    height: 99vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+    overflow: hidden;
+}
+/* Subcontainer-parent */
+.subcontainer-parent
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: absolute;  
+    top: 0;  
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    /* border: 1px solid white; */
+}
+/* Sub Container */
+.subContainer
+{
+    position: absolute;
+    height: 300px;
+    width: 700px;
+    border: 1px solid hsl(00, 00%, 20%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 0.2fr;
+    overflow: visible;
+    grid-gap: 1px;
+    scale: (var(--scalesub));
+    visibility: visible;
+}
+/* Within Container */
+.clockText
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 900;
+    font-size: calc(1vw + 5rem);
+    /* background-color: aqua; */
+    background-color: transparent;
+    grid-column-start: 1 !important;
+    grid-column-end: 5 !important;
+    grid-row-start: 1 !important;
+    grid-row-end: 1 !important;
+}
+.days {
+    /* background-color: red; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    
+}
+.hours {
+    /* background-color: green; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.minutes {
+    /* background-color: yellow; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.seconds {
+    /* background-color: blue; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+/* Inner Number */
+#daysnum
+{
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+#hoursnum
+{
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+#minutesnum
+{
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+#secondsnum
+{
+    color: #ee5486;
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+/* Inner Text */
+.tday
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.thour
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.tminute
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.tsecond
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+
+#pre-loader
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #000 no-repeat center center;
+    z-index: 100;
+    background-size: 5%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+}
+#pre-loader img
+{
+    position: absolute;
+    z-index: 102;
+    scale: 30%;
+    filter: drop-shadow(0 0 100px #fff);
+    overflow: hidden;
+}
+#pre-loader div
+{
+    position: absolute;
+    z-index: 101;
+    background-color: #fff;
+    height: 0%;
+    border-radius:50%;
+    aspect-ratio: 1/1;
+    box-shadow: 
+    0 0 20px 0px #fff,
+    0 0 60px 0px #fff,
+    0 0 100px 0px #fff;
+    animation: playback forwards 2800ms ease-in;
+    animation-delay: 1000ms;
+    overflow: hidden;
+}
+
+@keyframes playback
+{
+    00%{height: 0%;}
+    10%{height: 20%;}
+    20%{height: 10%;}
+    40%{height: 40%;}
+    60%{height: 30%;}
+    80%{height: 60%;}
+    100%{height: 1000%;}
+}

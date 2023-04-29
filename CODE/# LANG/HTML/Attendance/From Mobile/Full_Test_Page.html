@@ -1,0 +1,134 @@
+<html>
+    <head><title>Index page</title><link rel="stylesheet" href="index.css"></head>
+    <style>
+        *
+        {
+            margin: 0px;
+            border: 0px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: cadetblue;
+        }
+        body
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(20, 20, 30)
+        }
+        h1
+        {
+            letter-spacing: 2px;
+            text-rendering: geometricPrecision;
+            font-family: monospace;
+            font-weight: 800;
+            font-size: 40px;
+        }
+        .main
+        {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 500px;
+            left: 0px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: whitesmoke;
+        }
+        .innerheading
+        {
+            display: none;
+            flex-direction: column;
+            height: 250px;
+            width: 400px;
+            align-items: center;
+            justify-content: center;
+            background-color: yellowgreen;
+        }
+        .innerhtml
+        {
+            display: none;
+            flex-direction: column;
+            height: 250px;
+            width: 400px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 99, 71, 0.50);
+        }
+        .intro
+        {
+            display: flex;
+            flex-direction: column;
+            height: 250px;
+            width: 400px;
+            align-items: center;
+            justify-content: center;
+            background-color: crimson;
+        }
+        .buttons
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: springgreen; */
+            width: 400px;
+            margin-top: 10px;
+        }
+        button
+        {
+            /* border: 1px solid black; */
+            background: teal;
+            color: aliceblue;
+            letter-spacing: 2px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            width: 100px;
+            height: 40px;
+            margin: 0px 10px;
+            border-radius: 10px;
+        }
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+        }
+    </style>
+    <script>
+        function page(value)
+        {
+            if(value == 'one')
+            {
+                console.log('loading page one')
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('pgone').style.display = 'flex';
+                document.getElementById('pgtwo').style.display = 'none';
+            }
+            if(value == 'two')
+            {
+                console.log('loading page two')
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('pgone').style.display = 'none';
+                document.getElementById('pgtwo').style.display = 'flex';
+            }
+            if(value == 'reset')
+            {
+                console.log('Resetting.')
+                document.getElementById('intro').style.display = 'flex';
+                document.getElementById('pgone').style.display = 'none';
+                document.getElementById('pgtwo').style.display = 'none';
+            }
+
+        }
+    </script>
+    <body>
+        <div class="main">
+            <div class="intro" id="intro"><h1>Default page</h1><p>press any two buttons from last</p><p>to go to next page</p></div>
+            <div class="innerheading" id="pgone"><h1>loading page one</h1><p>Welcome to page one</p><p>The Home Screen</p></div>
+            <div class="innerhtml" id="pgtwo"><h1>loading page two</h1><p>Welcome to page two</p><p>The User Screen</p></div>
+            <div class="buttons">
+                <button onclick="page('reset')">Reset</button>
+                <button onclick="page('one')">Home</button>
+                <button onclick="page('two')">User</button>
+            </div>
+        </div>
+    </body>
+</html>

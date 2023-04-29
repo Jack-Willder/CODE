@@ -1,0 +1,127 @@
+:: Episode : 21
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2021%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 22
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2022%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 23
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2023%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 24
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2024%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 25
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2025%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 26
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2026%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 27
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2027%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 28
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2028%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 29
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2029%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 30
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2030%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 31
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2031%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 32
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2032%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 33
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2033%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 34
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2034%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 35
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2035%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 36
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2036%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 37
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2037%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 38
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2038%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 39
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2039%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 40
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2040%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 41
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2041%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 42
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2042%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 43
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2043%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 44
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2044%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 45
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2045%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 46
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2046%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 47
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2047%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 48
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-Chan%20-%2048%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 49
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-chan%20-%2049%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 50
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-chan%20-%2050%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 51
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-chan%20-%2051%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK
+
+:: Episode : 52
+start https://server1.myshinchan.xyz/8:/new%201.25.22/Shinchan%20Season%201/MyShinchan.xyz%20-%20%20Crayon%20Shin-chan%20-%2052%20-%20576p%20Tamil-Hindi-Telugu.mkv
+TIMEOUT /T 2 /NOBREAK

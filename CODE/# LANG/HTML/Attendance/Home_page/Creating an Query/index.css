@@ -1,0 +1,90 @@
+*
+{
+    margin: 0px;
+    border: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: cadetblue;
+}
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20, 20, 30)
+}
+h1
+{
+    letter-spacing: 2px;
+    text-rendering: geometricPrecision;
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 40px;
+}
+.main
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    left: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.innerheading
+{
+    display: none;
+    flex-direction: column;
+    height: 250px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    background-color: yellowgreen;
+}
+.innerhtml
+{
+    display: none;
+    flex-direction: column;
+    height: 250px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 99, 71, 0.50);
+}
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+}
+.buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: springgreen; */
+    width: 400px;
+    margin-top: 10px;
+}
+button
+{
+    /* border: 1px solid black; */
+    background: teal;
+    color: aliceblue;
+    letter-spacing: 2px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100px;
+    height: 40px;
+    margin: 0px 10px;
+    border-radius: 10px;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}

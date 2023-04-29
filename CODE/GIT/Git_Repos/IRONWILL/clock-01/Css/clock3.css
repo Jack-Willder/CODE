@@ -1,0 +1,11 @@
+#counterclock
+{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: springgreen;
+}

@@ -1,0 +1,231 @@
+:root
+{
+    background-color: transparent;
+}
+#testerDot
+{
+    position: absolute;
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: yellowgreen;
+    z-index: 30;
+}
+#sideMenu
+{
+    position: absolute;
+    background-color: transparent;
+    height: 100vh;
+    width: 300px;
+    left: -2000px;
+    transition: left 200ms ease-out;
+    z-index: 20;
+}
+.togglebar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 25;
+    height: 100px;
+    width: 100px;
+    left: calc(0.001vw + 10px);
+    top: calc(0.001vh + 20px);
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: left 100ms cubic-bezier(0.81, 0.13, 0.24, 0.87);
+}
+.active-content
+{
+    left: 0px !important;
+}
+.bar {
+    position: absolute;
+    background-color: black;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+.chile {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    /* background-color: blue; */
+    height: 60%;
+    width: 60%;
+    flex-direction: column;
+    transition-duration: 100ms;
+}
+
+.fullscreen-button
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.10);
+    position: absolute;
+    top: calc(0.001vh + 20px);
+    right: 10px;
+}
+.fullscreen-mainframe
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+.fullscreen-subframe
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+.fullscreen-minicontainer
+{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    background-color: transparent;
+    width: 60%;
+    height: 60%;
+}
+.fullscreen-minicontainer div
+{
+    position: absolute;
+    background-color: white;
+}
+.fullscreen-minicontainer div:nth-child(1)
+{
+    top: 0px;
+    left: 0px;
+    width: 5px;
+    height: 10px;
+}
+.fullscreen-minicontainer div:nth-child(2)
+{
+    top: 0px;
+    right: 0px;
+    width: 5px;
+    height: 10px;
+}
+.fullscreen-minicontainer div:nth-child(3)
+{
+    bottom: 0px;
+    left: 0px;
+    width: 5px;
+    height: 10px;
+}
+.fullscreen-minicontainer div:nth-child(4)
+{
+    bottom: 0px;
+    right: 0px;
+    width: 5px;
+    height: 10px;
+}
+.fullscreen-minicontainer div:nth-child(5)
+{
+    top: 0px;
+    left: 0px;
+    width: 10px;
+    height: 5px;
+}
+.fullscreen-minicontainer div:nth-child(6)
+{
+    top: 0px;
+    right: 0px;
+    width: 10px;
+    height: 5px;
+}
+.fullscreen-minicontainer div:nth-child(7)
+{
+    bottom: 0px;
+    left: 0px;
+    width: 10px;
+    height: 5px;
+}
+.fullscreen-minicontainer div:nth-child(8)
+{
+    bottom: 0px;
+    right: 0px;
+    width: 10px;
+    height: 5px;
+}
+span {
+    /* display: none; */
+    background-color: black;
+    width: 90%;
+    height: 5px;
+}
+.barcontainer {
+    background: rgb(2,0,36);
+    /* background: linear-gradient(-30deg, rgba(2,0,36,1) 0%, rgba(20,20,119,1) 47%, rgba(0,212,255,1) 100%); */
+    background: linear-gradient(-30deg, #0000, #000232);
+    height: 100%;
+    width: inherit;
+    margin-top: 0px;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: calc(0.001vh + 20px + 100px);
+}
+li {
+    margin-top: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(-30deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.6) 100%);    
+    height: calc(5vh + 15px);
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: calc(1vh + 15px);
+    letter-spacing: 2px;
+    /* border: 1px solid red; */
+    transition: 
+    background 300ms ease-in,
+    scale 100ms ease-in;
+    cursor: pointer;
+    user-select: none;
+}
+li:hover
+{
+    background-color: rgba(255, 255, 255, 0.250);
+    scale: 1.030;
+}

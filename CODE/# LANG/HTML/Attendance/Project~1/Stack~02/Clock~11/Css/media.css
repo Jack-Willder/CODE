@@ -1,0 +1,23 @@
+@media screen and (max-width: 720px)
+{
+    .subContainer {width: 90vw;height: 200px;}
+    .clockText {font-size: calc(6vw + 1rem);}
+}
+
+@media screen and (orientation: portrait) 
+{
+    #sideMenu {width: calc(100vw - 150px) !important;}
+}
+
+@media screen and (orientation: landscape) and (max-height: 720px)
+{
+    body {background-color: black;}
+    .subContainer {height: calc(100vh - 150px);top: 50px;}
+    #daysnum, #hoursnum, #minutesnum, #secondsnum {font-size: calc(5vh + 45px);}
+    .tday, .thour, .tminute, .tsecond {font-size: calc(1vh + 10px);}
+    .clockText {font-size: calc(5vh + 50px);}
+    .togglebar {width: 50px !important;height: 50px !important;}
+    ul {margin-top: calc(0.001vh + 20px + 50px) !important;}
+    /* .responsive-container {margin-top: -6%;} */
+    .settings-container-text-one {font-size: calc(5vw - 20px);margin-top: -10px;}
+}

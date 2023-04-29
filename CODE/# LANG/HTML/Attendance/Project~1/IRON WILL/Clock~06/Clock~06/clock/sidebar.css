@@ -1,0 +1,62 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+:root
+{
+    background-color: transparent;
+}
+#sideMenu
+{
+    position: absolute;
+    background-color: transparent;
+    height: 100vh;
+    width: 300px;
+    left: -300px;
+
+}
+.togglebar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 5;
+    height: 50px;
+    width: 50px;
+    left: calc(300px + 1vw);
+    top: 2vh;
+    background-color: whitesmoke;
+}
+.active-content
+{
+    left: 0px !important;
+}
+.bar
+{
+    background-color: black;
+    height: inherit;
+    width: inherit;
+}
+.chile {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    /* background-color: blue; */
+    height: 60%;
+    width: 60%;
+    flex-direction: column;
+}
+span {
+    /* display: none; */
+    background-color: black;
+    width: 90%;
+    height: 5px;
+}

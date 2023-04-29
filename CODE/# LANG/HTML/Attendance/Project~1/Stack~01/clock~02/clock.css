@@ -1,0 +1,157 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+body
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: hsl(00, 00%, 12%);
+    color: white;
+}
+/* Main Container */
+.mainContainer
+{
+    height: 99vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid white;
+    overflow: hidden;
+}
+/* Sub Container */
+.subContainer
+{
+    height: 60vh;
+    width: 98vw;
+    border: 1px solid hsl(00, 00%, 20%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow: hidden;
+    grid-gap: 5px;
+    scale: 0.90;
+}
+/* Within Container */
+.clockText
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 900;
+    font-size: 8ch;
+    padding-bottom: 50px;
+    /* background-color: aqua; */
+    background-color: transparent;
+    grid-column-start: 1 !important;
+    grid-column-end: 5 !important;
+    grid-row-start: 1 !important;
+    grid-row-end: 1 !important;
+}
+.days {
+    /* background-color: red; */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-transform: uppercase;
+    scale: 0.75;
+    
+}
+.hours {
+    /* background-color: green; */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-transform: uppercase;
+    scale: 0.75;
+}
+.minutes {
+    /* background-color: yellow; */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-transform: uppercase;
+    scale: 0.75;
+}
+.seconds {
+    /* background-color: blue; */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-transform: uppercase;
+    scale: 0.75;
+}
+/* Inner Number */
+#daysnum
+{
+    font-size: 10ch;
+    font-family: sans-serif;
+}
+#hoursnum
+{
+    font-size: 10ch;
+    font-family: sans-serif;
+}
+#minutesnum
+{
+    font-size: 10ch;
+    font-family: sans-serif;
+}
+#secondsnum
+{
+    color: palevioletred;
+    font-size: 10ch;
+    font-family: sans-serif;
+}
+/* Inner Text */
+.tday
+{
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.thour
+{
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.tminute
+{
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.tsecond
+{
+    color: palevioletred;
+    font-size: 2ch;
+    font-family: sans-serif;
+}

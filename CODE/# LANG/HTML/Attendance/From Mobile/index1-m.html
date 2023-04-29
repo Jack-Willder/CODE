@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 5px;
+            background: white;
+            margin-inline: auto;
+        }
+        
+        .outline-1 {
+            /* background: blue; */
+            height: 85vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .outline-2 {
+            /* background-color: green; */
+            margin-left: -20px;
+            height: 30rem;
+            width: 20rem;
+        }
+        
+        fieldset {
+            color: black;
+            border-color: white;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-stretch: extra-expanded;
+            font-style: italic;
+            font-weight: 900;
+            height: 30rem;
+            border-width: .1px;
+            box-shadow: 10px 10px 25px -15px black;
+        }
+        
+        legend {
+            cursor: default;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          /*  background-color: aqua; */
+        }
+        
+        .main-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            height: 20rem;
+            width: 20rem;
+           /* background-color: blueviolet; */
+        }
+        
+        .main-content :nth-child(1) {
+            position: relative;
+            color: black;
+            font-size: 18ch;
+            margin: 0px;
+            left: -10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 0px;
+            text-shadow: 8px 8px 10px rgb(0, 115, 255);
+        }
+        
+        .main-content :nth-child(2) {
+            position: relative;
+            color: rgba(0, 0, 0, 0.600);
+            font-family: monospace;
+            margin: 0px;
+            font-size: 10px;
+            letter-spacing: 10px;
+            font-weight: bolder;
+        }
+        
+        .main-buttons {
+            /* background-color: chartreuse; */
+            height: 5rem;
+            width: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .buttons {
+            /* background: red; */
+            width: 20rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .b {
+            border: 0px;
+            outline: 5px solid black;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            /* background-color: violet; */
+            color: black;
+            outline-offset: 2px;
+        }
+    </style>
+    <div class="outline-1">
+        <div class="outline-2">
+            <fieldset>
+                <legend>Attendance</legend>
+                <div class="main">
+                    <div class="main-content">
+                        <div id="num">0</div>
+                        <div>days of Holidays</div>
+                    </div>
+                    <div class="main-buttons">
+                        <div class="buttons">
+                            <button class="b button-1" onclick="totalClick(-1)">-</button>
+                            <button class="b button-2" onclick="totalClick(1)">+</button>    
+                            <button class="b button-3" onclick="resetButton()">()</button>    
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <script>
+        function totalClick(click) {
+            const totalClicks = document.getElementById('num');
+            const sumvalue = parseInt(totalClicks.innerText) + click;
+            console.log(sumvalue);
+            totalClicks.innerText = sumvalue;
+            
+            // Avoid negatives
+            if(sumvalue < 0) {
+                totalClicks.innerText = 0;
+            }
+
+            // Avoid 90+
+            if(sumvalue > 90) {
+                totalClicks.innerText = 90;
+            }
+
+            // Saving to local storage
+            localStorage.setItem('number', JSON.stringify(sumvalue) );
+        }
+        // Reset Button
+        function resetButton() {
+            const totalClicks = document.getElementById('num');
+            const sumvalue = 0;
+            totalClicks.innerText = sumvalue;
+        }
+
+        // Recall value function
+        const recall = function() {
+            const sumvalue = 0;
+            const value = document.getElementById('num');
+            const getvalue = localStorage.getItem('number', sumvalue);
+            if(getvalue > 0 || getvalue < 90) {
+                value.innerText = getvalue;
+            }
+            else {
+                value.innerText = 0;
+            }
+            console.log(getvalue);
+        }
+
+        document.onload = recall();
+    </script>
+</body>
+</html>

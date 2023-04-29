@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>IRON will</title>
+    <link rel="icon" type="image/x-icon" href="favicon.webp">
+    <!-- Style Sources -->
+    <link rel="stylesheet" href="Css/clock.css" />
+    <link rel="stylesheet" href="Css/clock2.css" />
+    <link rel="stylesheet" href="Css/clock3.css" />
+    <link rel="stylesheet" href="Css/settings.css" />
+    <link rel="stylesheet" href="Css/media.css" />
+    <link rel="stylesheet" href="Css/sidebar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/></head>
+  <body>
+    <!-- <div id="pre-loader"><img src="https://media.tenor.com/1q6jBuNi1MUAAAAi/pokemon-pikachu.gif"><div></div></div> -->
+    <div class="mainContainer">
+      <div class="toggleBar" id="toggleButton">
+        <!-- <div id="testerDot"></div> -->
+        <div class="chile" id="chile">
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </div>
+      </div>
+      <div id="sideMenu">
+        <div class="bar" id="bar">
+          <div class="barcontainer">
+            <div class="fullscreen-button" id="fullscreen-button">
+              <div class="fullscreen-mainframe">
+                <div class="fullscreen-subframe">
+                  <div class="fullscreen-minicontainer">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucontent">
+              <ul>
+                <li onclick="call('clock')">Clock</li>
+                <li onclick="call('counter')" id="showNotification">Counter</li>
+                <li onclick="call('counterclock')">Counter~Clock</li>
+                <li onclick="call('settings')">Settings</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="clock"></div>
+      <div id="counterclock">
+        <div class="mainframe-counterclock">
+
+        </div>
+      </div>
+      <div id="settings">
+        <div class="responsive-container">
+          <div class="settings-container-text-one">Choose<p>Time</p>and<p>Date</p></div>
+          <input type="datetime-local" id="input-time" value="2022-12-02T00:00" placeholder="Select DateTime">
+          <button id="settings-button">Save</button>
+        </div>
+      </div>
+      <div class="subContainer" id="counter">
+        <div class="clockText">IRON WILL Timer</div>
+        <div class="days"><div id="daysnum">0</div></div>
+        <div class="hours"><div id="hoursnum">0</div></div>
+        <div class="minutes"><div id="minutesnum">0</div></div>
+        <div class="seconds"><div id="secondsnum">0</div></div>
+        <div class="tday">days</div>
+        <div class="thour">hours</div>
+        <div class="tminute">minutes</div>
+        <div class="tsecond">seconds</div>
+      </div>
+    </div>
+    <!-- Script sources -->
+    <script src="Js/viewport.js"></script>
+    <script src="Js/clock.js"></script>
+    <script src="Js/sidebar.js"></script>
+    <script src="Js/settings.js"></script>
+    <!-- <script>var loader = document.getElementById('pre-loader');window.addEventListener('load', function(){setTimeout(() => {loader.style.display = 'none';}, 4000);});</script> -->
+    </body>
+</html>

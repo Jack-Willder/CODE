@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 5px;
+            background: white;
+            margin-inline: auto;
+        }
+        
+        .ccr {
+            position: fixed;
+            display: flex;
+            top: 0px;
+            width: 100%;
+            justify-content: center;
+            /* background-color: brown; */
+
+        }
+
+        .ccr select {
+            background: whitesmoke;
+            border: 0px solid black;
+            border-radius: 0px 0px 10px 10px;
+            height: 2rem;
+            width: 5rem;
+        }
+
+        .outline-1 {
+            /* background: blue; */
+            height: 98vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .outline-2 {
+            /* background-color: green; */
+            height: 30rem;
+            width: 30rem;
+        }
+        
+        fieldset {
+            color: black;
+            border-color: white;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-stretch: extra-expanded;
+            font-style: italic;
+            font-weight: 900;
+            height: 30rem;
+            border-width: .1px;
+            box-shadow: 10px 10px 25px -15px black;
+        }
+        
+        legend {
+            cursor: default;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* background-color: aqua; */
+        }
+        
+        .main-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            height: 20rem;
+            width: 20rem;
+            /* background-color: blueviolet; */
+        }
+        
+        .main-content :nth-child(1) {
+            position: relative;
+            color: black;
+            font-size: 20ch;
+            margin: 0px;
+            left: -10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 5px;
+            text-shadow: 8px 8px 10px rgb(0, 115, 255);
+        }
+        
+        .main-content :nth-child(2) {
+            position: relative;
+            color: rgba(0, 0, 0, 0.600);
+            font-family: monospace;
+            margin: 0px;
+            font-size: 15px;
+            letter-spacing: 10px;
+            font-weight: bolder;
+        }
+        
+        .main-buttons {
+            /* background-color: chartreuse; */
+            height: 5rem;
+            width: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .buttons {
+            /* background: red; */
+            width: 20rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .b {
+            border: 0px;
+            outline: 5px solid black;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            /* background-color: orangered; */
+            color: black;
+            outline-offset: 2px;
+        }
+    </style>
+    <div class="ccr">
+        <select onchange="colorChanger(this.value)">
+            <option value="">default</option>
+            <option value="blue">Blue</option>
+            <option value="green">green</option>
+            <option value="red">red</option>
+        </select>
+    </div>
+    <div class="outline-1">
+        <div class="outline-2">
+            <fieldset>
+                <legend>Attendance</legend>
+                <div class="main">
+                    <div class="main-content">
+                        <div id="num">0</div>
+                        <div>days of Holidays</div>
+                    </div>
+                    <div class="main-buttons">
+                        <div class="buttons">
+                            <button class="b button-1" onclick="totalClick(-1)">-</button>
+                            <button class="b button-2" onclick="totalClick(1)">+</button>    
+                            <button class="b button-3" onclick="resetButton()">()</button>    
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <script>
+        function totalClick(click) 
+        {
+            const totalClicks = document.getElementById('num');
+            var sumvalue = parseInt(totalClicks.innerText) + click;
+            if(sumvalue < 0) {sumvalue = 0;}
+            totalClicks.innerText = sumvalue;
+            
+            // Avoid negatives and 90+
+            if(sumvalue < 0) {totalClicks.innerText = 0}
+            if(sumvalue > 90) {totalClicks.innerText = 90}
+                        
+            // Saving to local storage
+            localStorage.setItem('number', JSON.stringify(sumvalue));
+            changecol(sumvalue);
+
+        }
+
+        // Reset Button
+        function resetButton() 
+        {
+            const totalClicks = document.getElementById('num');
+            totalClicks.innerText = 0;
+            const sumvalue = 0;
+            localStorage.setItem('number', JSON.stringify(sumvalue));
+            changecol(sumvalue);
+        }
+
+        // Changing font color based on value
+        function changecol(sumvalue)
+        {
+            var setcolorvar = 0;
+            if(sumvalue >= 00 && sumvalue <= 10) {colorChanger('rgb(0, 225, 255)'); setcolorvar = 1;}
+            if(sumvalue >= 11 && sumvalue <= 20) {colorChanger('yellow'); setcolorvar = 2;}
+            if(sumvalue >= 21 && sumvalue <= 30) {colorChanger('orange'); setcolorvar = 3;}
+            if(sumvalue >= 31) {colorChanger('red'); setcolorvar = 4;}
+            colorChangertwo(setcolorvar);
+        }
+
+        // Recall value function
+        const recall = function() 
+        {
+            const sumvalue = 0;
+            const numvalue = document.getElementById('num');
+            const getvalue = localStorage.getItem('number', sumvalue);
+            if(getvalue >= 0 && getvalue <= 90) {numvalue.innerText = getvalue;}
+            else {numvalue.innerText = 0;}
+
+        }
+
+        // Changing background
+        function colorChanger(value) {document.body.style.backgroundColor = value;}
+        function colorChangertwo(setcolorvar) {
+            document.getElementById('num').style.textShadow = '8px 8px 10px red';
+            if(setcolorvar == 1) {document.getElementById('num').style.textShadow = '8px 8px 10px rgb(0, 115, 255)';}
+            if(setcolorvar == 2) {document.getElementById('num').style.textShadow = '8px 8px 10px yellow';}
+            if(setcolorvar == 3) {document.getElementById('num').style.textShadow = '8px 8px 10px orange';}
+            if(setcolorvar == 4) {document.getElementById('num').style.textShadow = '8px 8px 10px orangered';}
+
+        }
+        
+        document.onload = recall();
+        document.onload = totalClick(0);
+    </script>
+</body>
+</html>

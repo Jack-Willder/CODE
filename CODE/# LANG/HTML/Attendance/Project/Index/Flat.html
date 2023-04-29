@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="Flat.css">
+        <link rel="stylesheet" href="media.css">
+        <link rel="stylesheet" href="Home.css">
+        <link rel="stylesheet" href="settings.css">
+        <link rel="stylesheet" href="block.css">
+    </head>
+    <body>
+        <div id="pre-loader"></div>
+        <!-- <div class="screen-size-tester">Hi</div> -->
+        <div class="main-page">
+            <div class="block">
+                <div class="Text">
+                    <span class="spanText">You</span>
+                    <span class="spanSmallText">Can't View This Page Currently</span>
+                </div>
+            </div>
+            <!-- <button class="back-color-nav" onclick="pageChanger('navbar')">*</button> -->
+            <div class="content_place">
+                <div class="for_content">
+                    <div class="outline-1">
+                        <div class="outline-2">
+                            <div id="pg-one">
+                                <fieldset>
+                                    <legend>Attendance</legend>
+                                    <div class="main">
+                                        <div class="main-content">
+                                            <div id="num">0</div>
+                                            <div>days of Holidays</div>
+                                        </div>
+                                        <div class="main-buttons">
+                                            <div class="buttons">
+                                                <button class="b button-1" onclick="totalClick(-1)">-</button>
+                                                <button class="b button-2" onclick="totalClick(1)">+</button>    
+                                                <button class="b button-3" onclick="resetButton()">()</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="og og1" id="pg-two"><div>User Page</div></div>
+                            <div class="og og2" id="pg-three"><div>Chat Page</div></div>
+                            <div class="og og3" id="pg-four"><div>Photos Page</div></div>
+                            <div class="og og4" id="pg-five">
+                                <div class="settingsLayout">
+                                    <div class="headText">Settings Page</div>
+                                    <div class="c"></div>
+                                    <div class="c"></div>
+                                    <div class="c"></div>
+                                    <div class="c"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar" id="navbarvalue">
+                <div class="nav_items">
+                    <ul>
+                        <li class="list active" onclick="pageChanger('one')">
+                            <a>
+                                <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                <span class="text">Home</span>
+                            </a>
+                        </li>
+                        <li class="list" onclick="pageChanger('two')">
+                            <a>
+                                <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                <span class="text">User</span>
+                            </a>
+                        </li>
+                        <li class="list" onclick="pageChanger('three')">
+                            <a>
+                                <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                                <span class="text">Message</span>
+                            </a>
+                        </li>
+                        <li class="list" onclick="pageChanger('four')">
+                            <a>
+                                <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                                <span class="text">Photos</span>
+                            </a>
+                        </li>
+                        <li class="list" onclick="pageChanger('five')">
+                            <a>
+                                <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                                <span class="text">Settings</span>
+                            </a>
+                        </li>
+                        <div class="indicator" id="indicatorColor"></div>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+
+
+        <script src="Flat.js"></script>
+        <script>
+            //----------------------------------------------- This Part of the code belongs to the Attendance Pge -----------------------------------------------
+            function totalClick(click) 
+            {
+                const totalClicks = document.getElementById('num');
+                var sumvalue = parseInt(totalClicks.innerText) + click;
+                if(sumvalue < 0) {sumvalue = 0;}
+                totalClicks.innerText = sumvalue;
+                
+                // Avoid negatives and 90+
+                if(sumvalue < 0) {totalClicks.innerText = 0}
+                if(sumvalue > 90) {totalClicks.innerText = 90}
+                            
+                // Saving to local storage
+                localStorage.setItem('number', JSON.stringify(sumvalue));
+                changecol(sumvalue);
+    
+            }
+    
+            // Reset Button
+            function resetButton() 
+            {
+                const totalClicks = document.getElementById('num');
+                totalClicks.innerText = 0;
+                const sumvalue = 0;
+                localStorage.setItem('number', JSON.stringify(sumvalue));
+                changecol(sumvalue);
+            }
+    
+            // Changing font color based on value
+            function changecol(sumvalue)
+            {
+                var setcolorvar = 0;
+                if(sumvalue >= 00 && sumvalue <= 10) {setcolorvar = 1;}
+                if(sumvalue >= 11 && sumvalue <= 20) {setcolorvar = 2;}
+                if(sumvalue >= 21 && sumvalue <= 30) {setcolorvar = 3;}
+                if(sumvalue >= 31) {setcolorvar = 4;}
+                colorChangertwo(setcolorvar);
+            }
+    
+            // Recall value function
+            const recall = function() 
+            {
+                const sumvalue = 0;
+                const numvalue = document.getElementById('num');
+                const getvalue = localStorage.getItem('number', sumvalue);
+                if(getvalue >= 0 && getvalue <= 90) {numvalue.innerText = getvalue;}
+                else {numvalue.innerText = 0;}
+    
+            }
+    
+            // Changing background
+            function colorChanger(value) {document.body.style.backgroundColor = value;}
+            function colorChangertwo(setcolorvar) {
+                document.getElementById('num').style.textShadow = '8px 8px 10px red';
+                if(setcolorvar == 1) {document.getElementById('num').style.textShadow = '8px 8px 50px rgb(0 115 255), 8px 8px 10px rgb(0 115 255)';}
+                if(setcolorvar == 2) {document.getElementById('num').style.textShadow = '8px 8px 50px yellow, 8px 8px 10px yellow';}
+                if(setcolorvar == 3) {document.getElementById('num').style.textShadow = '8px 8px 50px orange, 8px 8px 10px orange';}
+                if(setcolorvar == 4) {document.getElementById('num').style.textShadow = '8px 8px 50px orangered, 8px 8px 10px orangered';}
+    
+            }
+            
+            document.onload = recall();
+            document.onload = totalClick(0);
+        </script>
+
+
+        <!------------------------------------------------- This Part of the code belongs to the Flat Pge ------------------------------------------------->
+        
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

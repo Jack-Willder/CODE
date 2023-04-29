@@ -1,0 +1,109 @@
+#settings
+{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    user-select: none;
+}
+.responsive-container
+{
+    width: 100vw;
+    height: 100vw;
+    background-color: transparent;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    scale: 200%;
+}
+.settings-container-child
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    padding-top: 20px;
+    width: 70%;
+}
+input#input-time {
+    margin: 0;
+    border: 0;
+    border-radius: 2px;
+    width: 30vw;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    filter: drop-shadow(2px 4px 6px hsl(310, 80%, 50%));
+    cursor: pointer;
+}
+input#input-time:focus-visible
+{
+    border: 0;
+    margin: 0;
+    outline: 0;
+    user-select: none;
+    filter: drop-shadow(2px 4px 6px hsl(310, 100%, 50%));
+}
+.settings-container-text-one {
+    font-size: calc(5vw - 10px);
+    font-family: monospace;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: transparent;
+    transform: translateX(0.6%);
+    padding-bottom: 10px;
+}
+.settings-container-text-one p
+{
+    color: hsl(310, 80%, 50%);
+    /* color: rgb(255, 0, 135); */
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+    padding: 0 10px;
+    text-align: center;
+}
+#settings-button
+{
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    height: 30px;
+    width: 60px;
+    border: 0;
+    border-radius: 2px;
+    font-size: 15px;
+    font-family: monospace;
+    margin-top: 15px;
+    cursor: pointer;
+    background: rgb(0,255,231);
+    background: linear-gradient(-30deg, rgba(0,255,231,1) 0%, rgba(0,146,255,1) 40%, rgba(0,35,255,1) 100%);
+}

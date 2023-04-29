@@ -1,0 +1,187 @@
+:root
+{
+    --scalesub: calc(100vh / 300vw)
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+body
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: hsl(00, 00%, 12%);
+    color: white;
+}
+/* Main Container */
+.mainContainer
+{
+    height: 99vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid white;
+    overflow: hidden;
+}
+/* Sub Container */
+.subContainer
+{
+    height: 300px;
+    width: 700px;
+    border: 1px solid hsl(00, 00%, 20%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 0.2fr;
+    overflow: hidden;
+    grid-gap: 1px;
+    scale: (var(--scalesub));    
+}
+/* Within Container */
+.clockText
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 900;
+    font-size: calc(1vw + 5rem);
+    /* background-color: aqua; */
+    background-color: transparent;
+    grid-column-start: 1 !important;
+    grid-column-end: 5 !important;
+    grid-row-start: 1 !important;
+    grid-row-end: 1 !important;
+}
+.days {
+    /* background-color: red; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    
+}
+.hours {
+    /* background-color: green; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.minutes {
+    /* background-color: yellow; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.seconds {
+    /* background-color: blue; */
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+/* Inner Number */
+#daysnum
+{
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+#hoursnum
+{
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+#minutesnum
+{
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+#secondsnum
+{
+    color: #ee5486;
+    font-size: calc(1vw + 80px);
+    font-family: sans-serif;
+}
+/* Inner Text */
+.tday
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.thour
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.tminute
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}
+.tsecond
+{
+    background-color: rgba(40,50,61,.62);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2ch;
+    font-family: sans-serif;
+}

@@ -1,0 +1,10 @@
+List of devices attached
+HAQGWGUGWK4PJF7D        device
+
+2022-12-16 19:10:24.171 INFO Main: Starting relay server on port 31416...
+2022-12-16 19:10:24.171 INFO Main: Checking gnirehtet client...
+2022-12-16 19:10:24.171 INFO Relay: Relay server started
+2022-12-16 19:10:24.499 INFO Main: Starting client...
+Starting: Intent { act=com.genymobile.gnirehtet.START cmp=com.genymobile.gnirehtet/.GnirehtetActivity }
+2022-12-16 19:10:24.921 INFO TunnelServer: Client #0 connected
+2022-12-16 19:10:25.124 INFO UdpConnection: 10.0.0.2:12160 -> 8.8.8.8:53 Open

@@ -1,0 +1,22 @@
+@media screen and (max-width: 720px)
+{
+    .subContainer
+    {
+        width: 90vw;
+        height: 200px;
+    }
+    .clockText
+    {
+        font-size: calc(6vw + 1rem);
+    }
+
+}
+
+@media screen and (orientation: portrait) 
+{
+    #sideMenu
+    {
+        width: calc(100vw - 150px) !important;
+        left: 0px;
+    }
+}

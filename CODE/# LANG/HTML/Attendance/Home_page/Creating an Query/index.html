@@ -1,0 +1,42 @@
+<html>
+    <head><title>Index page</title><link rel="stylesheet" href="index.css"></head>
+    <script>
+        function page(value)
+        {
+            if(value == 'one')
+            {
+                console.log('loading page one')
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('pgone').style.display = 'flex';
+                document.getElementById('pgtwo').style.display = 'none';
+            }
+            if(value == 'two')
+            {
+                console.log('loading page two')
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('pgone').style.display = 'none';
+                document.getElementById('pgtwo').style.display = 'flex';
+            }
+            if(value == 'reset')
+            {
+                console.log('Resetting.')
+                document.getElementById('intro').style.display = 'flex';
+                document.getElementById('pgone').style.display = 'none';
+                document.getElementById('pgtwo').style.display = 'none';
+            }
+
+        }
+    </script>
+    <body>
+        <div class="main">
+            <div class="intro" id="intro"><h1>Default page</h1><p>press any two buttons from last</p><p>to go to next page</p></div>
+            <div class="innerheading" id="pgone"><h1>loading page one</h1><p>Welcome to page one</p><p>The Home Screen</p></div>
+            <div class="innerhtml" id="pgtwo"><h1>loading page two</h1><p>Welcome to page two</p><p>The User Screen</p></div>
+            <div class="buttons">
+                <button onclick="page('reset')">Reset</button>
+                <button onclick="page('one')">Home</button>
+                <button onclick="page('two')">User</button>
+            </div>
+        </div>
+    </body>
+</html>
